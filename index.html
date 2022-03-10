@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcup icon" href="./imagem/minidev.png" type="imagem/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap" rel="stylesheet">
+    <title>Formulario</title>
+    <style>
+        * {
+            font-family: 'Mukta', sans-serif;
+            padding: 0;
+            margin: 0;
+            color: rgb(190, 190, 190);
+        }
+        body {
+            display: flex;
+        }
+        .esquerda {
+            background: linear-gradient(0deg, rgb(0, 0, 0) -70%, rgb(44, 88, 129)100%);/*rgb(65, 65, 165)*/
+            height: 100vh;
+            text-align: center;
+            padding: 0 200px;
+        }
+        .esquerda img {
+            height: 400px;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 50pt;
+        }
+        h2 {
+            font-size: 13pt;
+            margin: 0 200px;
+        }
+        .direita {
+            background: linear-gradient(90deg, rgb(0, 0, 0) 110%, rgb(129, 125, 125)11%);/*rgb(165, 122, 65)*/
+            width: 100%;
+        }
+        .caixa {
+            margin-top: 30%;
+            text-align: center;
+        }
+        p {
+            font-size: 40pt;
+            margin-bottom: 30px;
+        }
+        label[for="email"] {
+            margin-right: 4px;
+        }
+        label {
+            font-size: 13pt;
+        }
+        .entrada {
+            width: 250px;
+            font-size: 10pt;
+            background: none;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid rgba(177, 177, 177, 0.301);
+            margin: 10px;
+        }
+        input[type="submit"] {
+            margin: 10px;
+            width: 100px;
+            height: 30px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(137, 137, 143);
+            border-radius: 20px;
+        }
+        input[type="submit"]:hover {
+            color: rgba(255, 255, 255, 0.712);
+            background-color: rgb(55, 55, 56);
+            cursor: pointer;
+        }
+        a {
+            font-size: 9pt;
+            margin: 0 15px;
+        }
+
+        @media(max-width: 1454px) {
+            .esquerda img {
+                height: 300px;
+            }
+            .direita {
+                width: 100%;
+            }
+            h2 {
+                margin: 0;
+            }
+            @media screen and (max-width: 1343px){
+                .esquerda img {
+                    height: 230px;
+                }
+            }
+            @media screen and (max-width: 1146px){
+                body {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .esquerda {
+                    padding: 0;
+                }
+                .esquerda img {
+                    height: 200px;
+                    margin: 10px;
+                }
+                .direita .caixa {
+                    margin-top: 15%;
+                    margin-bottom: 150px;
+                }
+                @media screen and (max-width: 704px) {
+                    .esquerda {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="esquerda">
+                <h1>Formulário de Login</h1>
+                <h2>@minidev.doc</h2>
+                <img src="./imagem/minidev.png" alt="imagem">
+        </div>
+        <div class="direita">
+            <div class="caixa">
+            <p>Bem vindo de volta!</p>
+            <form>
+                <label for="email">email</label>
+                <input title="Digite seu email" type="email" name="email" class="entrada" autocomplete="off" required> <br>
+                <label for="password">senha</label>
+                <input title="Digite sua senha" type="password" name="password" class="entrada" required> <br>
+                <input type="submit" value="Enviar"> <br>
+                <a href="#">Não tem uma conta?</a>
+                <a href="#">Esqueceu a senha?</a>
+            </form>
+            </div>
+        </div>
+</body>
+</html>
